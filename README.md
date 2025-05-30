@@ -4,7 +4,7 @@ Integrantes:
 - Marcelo Amorim – RA:  
 - Anali Rodrigues – RA:  
 
-Sistema de Campeonato de Tênis
+# Sistema de Campeonato de Tênis
 
 Nosso sistema tem como objetivo simular um campeonato de Tênis, permitindo o cadastro de times e jogadores, a realização dos confrontos com pontuação, e por fim, determinar o time vencedor com base nos resultados obtidos durante o torneio.
 
@@ -19,7 +19,7 @@ E por fim o sistema calcula qual time pontuou mais e recebe o titulo como venced
 
 
 
-# Cadastro dos Times e Jogadores
+Cadastro dos Times e Jogadores
 
 O código começa com duas mensagens introdutórias utilizando a função print() para informar ao usuário que o campeonato vai começar e que o primeiro passo será cadastrar os times:
 
