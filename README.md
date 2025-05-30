@@ -118,6 +118,9 @@ Isso é feito com uma chamada recursiva da função (a função chama a si mesma
 Função campeonato
 
 Essa função organiza o campeonato em várias rodadas, até que reste apenas um time, que será o campeão.
+a variavel rodada = 1, serve pra indicar em qual rodada o programa está rodando, a cada loop ele recebe mais 1.
+o while nesse caso le quantos times foram declarados e verifica se possui mais de 1
+Será declarada na lista vencedores quem obteve a maior pontuação na rodada.
 
 def campeonato(times):
     rodada = 1
@@ -125,8 +128,12 @@ def campeonato(times):
         print(f"\n Iniciando a Rodada {rodada}")
         vencedores = []
 
+
 Em cada rodada, os times são emparelhados de dois em dois para realizar confrontos. 
+
 Um índice i é usado para navegar pela lista de times:
+Esse while interno pega dois times por vez (ex: 0 e 1, depois 2 e 3, etc.)
+Para cada par, chama a função realizar_confronto e armazena o vencedor na lista vencedores
 
 i = 0
 while i < len(times) - 1:
@@ -136,7 +143,7 @@ while i < len(times) - 1:
     vencedores.append(vencedor)
     i += 2
 
-Se o número de times for ímpar, o último time avança automaticamente para a próxima rodada:
+Usamos o if para se acaso  o número de times for ímpar, ele e adicionado na lista vendedores e avança automaticamente para a próxima rodada:
 
 if len(times) % 2 != 0:
     print(f"{times[-1]['nome']} avançou automaticamente!")
@@ -146,6 +153,8 @@ A lista times é atualizada com os vencedores da rodada, e o processo se repete:
 
 times = vencedores
 rodada += 1
+
+Criamos uma variavel que recebera a lista times ja atualizada, na qual a posição 0 indicaria quem será o vencedor
 
 Quando sobra apenas um time, ele é declarado campeão:
 
